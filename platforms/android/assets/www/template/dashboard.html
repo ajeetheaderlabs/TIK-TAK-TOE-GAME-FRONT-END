@@ -1,0 +1,38 @@
+<ion-view title="Dashboard">
+<ion-content class="has-header" overflow-scroll="true" padding="true">
+<div class="list card">
+    <div class="item item-body">
+        <form class="list dsahbordDiv" ng-repeat="dash in dashBoardData">
+            <label name="rank" class="item item-input">
+                <span class="input-label">Rank</span>
+                <input placeholder="N/A" type="text" ng-model="dash.rank">
+            </label>
+            <label name="score" class="item item-input">
+                <span class="input-label">Score</span>
+                <input placeholder="N/A" type="text" ng-model="dash.score">
+            </label>
+            <label name="wins" class="item item-input">
+                <span class="input-label">Wins</span>
+                <input placeholder="N/A" type="text" ng-model="dash.win">
+            </label>
+            <label name="loss" class="item item-input">
+                <span class="input-label">Loss</span>
+                <input placeholder="N/A" type="text" ng-model="dash.loss">
+            </label>
+            <label name="tie" class="item item-input">
+                <span class="input-label">Tie</span>
+                <input placeholder="N/A" type="text" ng-model="dash.totalTie">
+            </label>
+            <label name="total_users" class="item item-input">
+                <span class="input-label">Total No of <br>Users</span>
+                <input placeholder="N/A" type="text" ng-model="dash.totalUser">
+            </label>
+        </form>
+    </div>
+</div>
+<div class="buttonWrapper text-center">
+  <button class="button playBtn playAgain noBorder" href="#"  ng-click = "initiateGame('http://192.168.1.250:8000/user'+dashBoardData[0].id)" return false;>Play Again</button>
+</div>
+</ion-content>
+</ion-view>
+

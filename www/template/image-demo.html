@@ -1,0 +1,24 @@
+<ion-view title="ImageDemo">
+  <ion-content class="has-header homeClass" overflow-scroll="false" padding="true">
+    <div class="row row-center height100Pre">
+      <div class="col">
+        <div class="list card">
+          <div class="item item-body">
+            <form class="list loginForm">
+              <label name="Profile Image" class="item item-input">
+                <input type="file" placeholder="Username"  ng-file-select="uploadImage($files)" ng-model="newResource.newUpload">
+              </label>
+              <div>
+                12{{newResource.newUpload}}
+              </div>
+
+              <!--<input type="button" value="submit" ng-click="uploadImage(newResource.newUpload)">-->
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

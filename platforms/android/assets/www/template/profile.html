@@ -1,0 +1,48 @@
+<ion-view title="Profile">
+  <ion-content class="has-header" padding="true">
+    <div class="row">
+      <div class="col">
+        <div class="list card noMarginTopBottom">
+          <div class="item item-body">
+            <form class="list loginForm">
+              <div class="cameraWrapper text-center">
+                        <span>
+                            <!-- <i class="icon ion-person-add"></i> -->
+                             <img src="img/ionic.png" ng-click="takePicture()" ng-hide="imgURI">
+
+                             <img ng-src="{{imgURI}}" ng-click="takePicture()" ng-show="imgURI">
+
+
+                            <i class="icon ion-camera"></i>
+                        </span>
+
+              </div>
+              <label name="name" class="item item-input">
+                <input placeholder="Name" type="text" ng-model="user.name">
+              </label>
+              <label style="" name="userid" class="item item-input posRel">
+                <!--<div class="idCross"></div>-->
+                <div class="tick"></div>
+                <input placeholder="User Id" type="text" class="paddingUserId" ng-model="user.user_name" ng-disabled="true">
+              </label>
+              <label name="password" class="item item-input">
+                <input placeholder="Password" type="password" ng-model="user.password" ng-disabled="true">
+              </label>
+              <ion-list class="genderWrapper">
+                <ion-radio ng-model="user.gender" ng-value="'Male'" ng-disabled="true">Male</ion-radio>
+                <ion-radio ng-model="user.gender" ng-value="'Female'" ng-disabled="true">Female</ion-radio>
+              </ion-list>
+              <div class="policyWrapper block">
+                <ion-checkbox>I agree privacy policy</ion-checkbox>
+              </div>
+              <button class="button button-dark button-block  icon-left ion-android-create noMarginBottom signUpBorder noBorder" ng-disabled="buttonDisable" ng-click="editProfile()">
+               Edit Profile
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
+
